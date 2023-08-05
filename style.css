@@ -1,0 +1,127 @@
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Sofia Sans Extra Condensed', sans-serif; */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: default;
+
+    padding: 2em;
+    background-color: hsl(0, 0%, 98%) ;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.3em;
+    
+    margin-bottom: .5em;
+    font-weight: 400;
+    color: hsl(229, 6%, 66%);
+}
+
+.title--bold {
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+
+.description {
+    color: hsl(229, 6%, 66%);
+    line-height: 1.5em;
+    margin-bottom: 3.5em;
+    text-align: center;
+    font-weight: 400;
+
+    max-width: 28em;
+    font-size: 15px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    /* row-gap: 1em; */
+
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.5em;
+}
+
+.card {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px 2px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-flow: column;
+    padding: 1.5em;
+
+    max-width: 18em;
+    min-width: 15em;
+}
+
+.card__heading {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: .5em;
+}
+
+.card--icon {
+    margin-top: 2em;
+    align-self: end;
+}
+
+.card__description {
+    line-height: 1.3em;
+    color: hsl(229, 6%, 66%);
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+}
+
+.card--supervisor {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.card--teamBuilder {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.card--karma {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.card--calculator {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+@media (max-width: 749px) {
+    .card-container {
+        flex-direction: column;
+        row-gap: 1.5em;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 950px) {
+    .card-container {
+        flex-flow: row wrap;
+        row-gap: 1.5em;
+    }
+
+    .center {
+        order: 3;
+        flex-direction: row;
+        column-gap: 1.5em;
+    }
+}
